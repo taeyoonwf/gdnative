@@ -26,7 +26,7 @@ pub use gdnative_core::object::{
 pub use gdnative_core::{godot_dbg, godot_error, godot_print, godot_warn};
 #[allow(deprecated)]
 pub use gdnative_core::{
-    godot_gdnative_init, godot_gdnative_terminate, godot_init, godot_nativescript_init,
+    godot_tts_gdnative_init, godot_tts_gdnative_terminate, godot_tts_init, godot_tts_nativescript_init,
 };
 pub use gdnative_derive::*;
 
