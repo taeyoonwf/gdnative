@@ -37,21 +37,21 @@ pub(crate) fn derive_callbacks(
         return Err(syn::Error::new(self_ty.span(), "generics are unsupported"));
     }
 
-    let gdnative_init = Ident::new(&format!("{prefix}gdnative_init"), Span::call_site());
-    let gdnative_terminate = Ident::new(&format!("{prefix}gdnative_terminate"), Span::call_site());
-    let gdnative_singleton = Ident::new(&format!("{prefix}gdnative_singleton"), Span::call_site());
-    let nativescript_init = Ident::new(&format!("{prefix}nativescript_init"), Span::call_site());
+    let gdnative_init = Ident::new(&format!("godot_tts_gdnative_init"), Span::call_site());
+    let gdnative_terminate = Ident::new(&format!("godot_tts_gdnative_terminate"), Span::call_site());
+    let gdnative_singleton = Ident::new(&format!("godot_tts_gdnative_singleton"), Span::call_site());
+    let nativescript_init = Ident::new(&format!("godot_tts_nativescript_init"), Span::call_site());
     let nativescript_terminate = Ident::new(
-        &format!("{prefix}nativescript_terminate"),
+        &format!("godot_tts_nativescript_terminate"),
         Span::call_site(),
     );
-    let nativescript_frame = Ident::new(&format!("{prefix}nativescript_frame"), Span::call_site());
+    let nativescript_frame = Ident::new(&format!("godot_tts_nativescript_frame"), Span::call_site());
     let nativescript_thread_enter = Ident::new(
-        &format!("{prefix}nativescript_thread_enter"),
+        &format!("godot_tts_nativescript_thread_enter"),
         Span::call_site(),
     );
     let nativescript_thread_exit = Ident::new(
-        &format!("{prefix}nativescript_thread_exit"),
+        &format!("godot_tts_nativescript_thread_exit"),
         Span::call_site(),
     );
 
