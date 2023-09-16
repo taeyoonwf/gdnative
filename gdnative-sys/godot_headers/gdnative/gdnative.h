@@ -263,8 +263,8 @@ godot_class_constructor GDAPI godot_get_class_constructor(const char *p_classnam
 godot_dictionary GDAPI godot_get_global_constants();
 
 ////// GDNative procedure types
-typedef void (*godot_gdnative_init_fn)(godot_gdnative_init_options *);
-typedef void (*godot_gdnative_terminate_fn)(godot_gdnative_terminate_options *);
+typedef void (*godot_tts_gdnative_init_fn)(godot_gdnative_init_options *);
+typedef void (*godot_tts_gdnative_terminate_fn)(godot_gdnative_terminate_options *);
 typedef godot_variant (*godot_gdnative_procedure_fn)(godot_array *);
 
 ////// System Functions
