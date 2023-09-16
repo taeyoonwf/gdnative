@@ -35,4 +35,4 @@ semver = "1"
 serde = { version = "1", features = ["derive"], optional = true }
 
 [dev-dependencies]
-gdnative = { path = "../gdnative" } # for doc-tests
+gdnative = { git = "https://github.com/taeyoonwf/gdnative.git", features = ["custom-godot"] }

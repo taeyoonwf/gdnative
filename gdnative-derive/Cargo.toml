@@ -22,4 +22,4 @@ proc-macro-crate = "1"
 
 [dev-dependencies]
 # This is included for the doc tests.
-gdnative = { path = "../gdnative" }
+gdnative = { git = "https://github.com/taeyoonwf/gdnative.git", features = ["custom-godot"] }
