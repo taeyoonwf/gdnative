@@ -26,7 +26,7 @@ pub(crate) fn derive_callbacks(
     let prefix = match prefix {
         Some(Lit::Str(s)) => s.value(),
         Some(lit) => return Err(syn::Error::new(lit.span(), "expecting string literal")),
-        None => "godot_".into(),
+        None => "godot_tts_".into(),
     };
 
     let derived = crate::automatically_derived();
