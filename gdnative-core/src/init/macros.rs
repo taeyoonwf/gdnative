@@ -13,7 +13,7 @@ macro_rules! godot_init {
             struct GDNativeCallbacksImpl;
 
             #[$crate::init::callbacks]
-            unsafe impl $crate::init::GDNativeCallbacks for GDNativeCallbacksImpl {
+            impl $crate::init::GDNativeCallbacks for GDNativeCallbacksImpl {
                 fn nativescript_init(handle: $crate::init::InitHandle) {
                     $callback(handle);
                 }
