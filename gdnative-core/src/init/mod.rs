@@ -205,7 +205,7 @@ pub fn auto_register(_init_handle: InitHandle) {
 
 #[allow(deprecated)]
 pub use crate::{
-    godot_gdnative_init, godot_gdnative_terminate, godot_init, godot_nativescript_init,
+    godot_tts_gdnative_init, godot_tts_gdnative_terminate, godot_tts_init, godot_tts_nativescript_init,
 };
 
 #[doc(inline)]

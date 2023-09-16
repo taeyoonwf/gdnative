@@ -7,7 +7,7 @@
 /// [`GDNativeCallbacks`][crate::init::GDNativeCallbacks] trait.
 #[macro_export]
 #[deprecated = "use the #[gdnative::init::callbacks] attribute macro instead"]
-macro_rules! godot_init {
+macro_rules! godot_tts_init {
     ($callback:ident) => {
         const _: () = {
             struct GDNativeCallbacksImpl;
@@ -29,7 +29,7 @@ macro_rules! godot_init {
 /// [`GDNativeCallbacks`][crate::init::GDNativeCallbacks] trait.
 #[macro_export]
 #[deprecated = "use the #[gdnative::init::callbacks] attribute macro instead"]
-macro_rules! godot_nativescript_init {
+macro_rules! godot_tts_nativescript_init {
     () => {
         const _: () = {
             struct GDNativeCallbacksImpl;
@@ -64,7 +64,7 @@ macro_rules! godot_nativescript_init {
 /// [`GDNativeCallbacks`][crate::init::GDNativeCallbacks] trait instead.
 #[macro_export]
 #[deprecated = "use the #[gdnative::init::callbacks] attribute macro instead"]
-macro_rules! godot_gdnative_init {
+macro_rules! godot_tts_gdnative_init {
     () => {};
     ($callback:ident) => {
         ::std::compile_error!("this syntax is no longer supported. use the #[gdnative::init::callbacks] attribute macro instead");
@@ -83,7 +83,7 @@ macro_rules! godot_gdnative_init {
 /// [`GDNativeCallbacks`][crate::init::GDNativeCallbacks] trait instead.
 #[macro_export]
 #[deprecated = "use the #[gdnative::init::callbacks] attribute macro instead"]
-macro_rules! godot_gdnative_terminate {
+macro_rules! godot_tts_gdnative_terminate {
     () => {};
     ($callback:ident) => {
         ::std::compile_error!("this syntax is no longer supported. use the #[gdnative::init::callbacks] attribute macro instead");
