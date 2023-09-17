@@ -20,7 +20,7 @@ pub fn generate_json_if_needed() -> bool {
     let version = exec(1, Command::new(&godot_bin).arg("--version"));
     println!("{}", version);
 
-    let has_generate_bug = match godot_version::parse_godot_version(&version) {
+    /*let has_generate_bug = match godot_version::parse_godot_version(&version) {
         Ok(parsed) => {
             assert!(
                 parsed.major == 3 && parsed.minor >= 2,
@@ -36,14 +36,14 @@ pub fn generate_json_if_needed() -> bool {
             eprintln!("Warning, failed to parse version: {}", e);
             true // version not known, conservatively assume bug
         }
-    };
+    };*/
 
     // Workaround for Godot bug, where the generate command crashes the engine.
     // Try 10 times (should be reasonably high confidence that at least 1 run succeeds).
     println!("Found Godot version < 3.3.1 with potential generate bug; trying multiple times...");
 
     exec(
-        if has_generate_bug { 10 } else { 1 },
+        //if has_generate_bug { 10 } else { 1 },
         Command::new(&godot_bin)
             .arg("--no-window")
             .arg("--gdnative-generate-json-api")
