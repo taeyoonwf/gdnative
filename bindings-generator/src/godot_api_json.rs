@@ -50,6 +50,7 @@ pub fn generate_json_if_needed() -> bool {
             .arg("api.json"),
     );
 
+    println!("here h0");
     // Best effort for generating the XML documentation
     // Note: this documentation is not the same as shipped by official Godot releases, but it's the best we have.
     exec_maybe(
@@ -60,6 +61,7 @@ pub fn generate_json_if_needed() -> bool {
             .arg("."),
     );
 
+    println!("here h1");
     // Godot output structure           required structure
     //
     // +-- api.json
@@ -72,6 +74,7 @@ pub fn generate_json_if_needed() -> bool {
     let _ = fs::remove_dir("doc");
     let _ = fs::remove_dir_all("modules");
 
+    println!("here h2");
     true
 }
 
