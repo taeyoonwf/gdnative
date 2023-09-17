@@ -24,11 +24,11 @@ fn main() {
         generate(&out_path, &mut output, &binding_res);
     }
 
-    {
+    /*{
         let mut output = BufWriter::new(File::create(&icalls_rs).unwrap());
 
         write!(output, "{}", binding_res.icalls).unwrap();
-    }
+    }*/
 
     format_file_if_needed(&generated_rs);
     format_file_if_needed(&icalls_rs);
