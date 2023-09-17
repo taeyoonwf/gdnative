@@ -10,23 +10,23 @@ pub struct GodotXmlDocs {
 
 impl GodotXmlDocs {
     pub fn new(folder: &str) -> Self {
-        let entries = fs::read_dir(folder)
+        /*let entries = fs::read_dir(folder)
             .unwrap()
             .map(|e| e.unwrap().path())
-            .collect::<Vec<_>>();
+            .collect::<Vec<_>>(); */
 
         let mut docs = GodotXmlDocs {
             class_fn_desc: HashMap::default(),
             regexes: Regexes::new(),
         };
 
-        for entry in entries {
+        /*for entry in entries {
             if entry.extension().map(|ext| ext == "xml").is_some() {
                 let file_content =
                     std::fs::read_to_string(entry.as_os_str()).expect("Unable to read file");
                 docs.parse_file(file_content.as_str());
             }
-        }
+        }*/
 
         docs
     }
