@@ -18,11 +18,11 @@ fn main() {
     let docs = gen::GodotXmlDocs::new("docs");
     let binding_res = gen::generate_bindings(&api, Some(&docs));
 
-    {
+    /*{
         let mut output = BufWriter::new(File::create(&generated_rs).unwrap());
 
         generate(&out_path, &mut output, &binding_res);
-    }
+    }*/
 
     /*{
         let mut output = BufWriter::new(File::create(&icalls_rs).unwrap());
