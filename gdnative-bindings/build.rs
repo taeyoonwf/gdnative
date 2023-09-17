@@ -9,10 +9,10 @@ fn main() {
 
     let api_data = std::fs::read_to_string("api.json").expect("Unable to read api.json");
 
-    let out_path = PathBuf::from(std::env::var("OUT_DIR").unwrap());
+    /* let out_path = PathBuf::from(std::env::var("OUT_DIR").unwrap());
 
     let generated_rs = out_path.join("generated.rs");
-    let icalls_rs = out_path.join("icalls.rs");
+    let icalls_rs = out_path.join("icalls.rs"); */
 
     let api = gen::Api::new(&api_data);
     let docs = gen::GodotXmlDocs::new("docs");
@@ -30,8 +30,8 @@ fn main() {
         write!(output, "{}", binding_res.icalls).unwrap();
     }*/
 
-    format_file_if_needed(&generated_rs);
-    format_file_if_needed(&icalls_rs);
+    //format_file_if_needed(&generated_rs);
+    //format_file_if_needed(&icalls_rs);
 
     // build.rs will automatically be recompiled and run if its dependencies are updated.
     // Ignoring everything but build.rs will avoid needless rebuilds.
