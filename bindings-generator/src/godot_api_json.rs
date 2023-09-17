@@ -43,7 +43,7 @@ pub fn generate_json_if_needed() -> bool {
     println!("Found Godot version < 3.3.1 with potential generate bug; trying multiple times...");
 
     exec(
-        //if has_generate_bug { 10 } else { 1 },
+        1,
         Command::new(&godot_bin)
             .arg("--no-window")
             .arg("--gdnative-generate-json-api")
