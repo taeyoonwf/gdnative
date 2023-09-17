@@ -13,7 +13,7 @@ macro_rules! godot_tts_init {
             struct GDNativeCallbacksImpl;
 
             #[$crate::init::callbacks]
-            impl $crate::init::GDNativeCallbacks for GDNativeCallbacksImpl {
+            unsafe impl $crate::init::GDNativeCallbacks for GDNativeCallbacksImpl {
                 fn nativescript_init(handle: $crate::init::InitHandle) {
                     $callback(handle);
                 }
