@@ -5,6 +5,7 @@ use std::io::{BufWriter, Write as _};
 use std::path::{Path, PathBuf};
 
 fn main() {
+    println!("here g-1");
     let just_generated_api = gen::generate_json_if_needed();
 
     println!("here g0");
@@ -27,25 +28,25 @@ fn main() {
     println!("here g7");
 
     println!("here g8");
-    /*{
+    {
         let mut output = BufWriter::new(File::create(&generated_rs).unwrap());
     println!("here g9");
 
         generate(&out_path, &mut output, &binding_res);
-    }*/
+    }
 
     println!("here ga");
-    /*{
+    {
         let mut output = BufWriter::new(File::create(&icalls_rs).unwrap());
     println!("here gb");
 
         write!(output, "{}", binding_res.icalls).unwrap();
-    }*/
+    }
 
     println!("here gc");
-    //format_file_if_needed(&generated_rs);
+    format_file_if_needed(&generated_rs);
 		println!("here gd");
-    //format_file_if_needed(&icalls_rs);
+    format_file_if_needed(&icalls_rs);
 		println!("here ge");
 
     // build.rs will automatically be recompiled and run if its dependencies are updated.
