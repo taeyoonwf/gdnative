@@ -7,31 +7,46 @@ use std::path::{Path, PathBuf};
 fn main() {
     let just_generated_api = gen::generate_json_if_needed();
 
+    println!("here h0");
     let api_data = std::fs::read_to_string("api.json").expect("Unable to read api.json");
 
+    println!("here h1");
     /* let out_path = PathBuf::from(std::env::var("OUT_DIR").unwrap());
 
+    println!("here h2");
     let generated_rs = out_path.join("generated.rs");
+    println!("here h3");
     let icalls_rs = out_path.join("icalls.rs"); */
 
+    println!("here h4");
     let api = gen::Api::new(&api_data);
+    println!("here h5");
     let docs = gen::GodotXmlDocs::new("docs");
+    println!("here h6");
     let binding_res = gen::generate_bindings(&api, Some(&docs));
+    println!("here h7");
 
+    println!("here h8");
     /*{
         let mut output = BufWriter::new(File::create(&generated_rs).unwrap());
+    println!("here h9");
 
         generate(&out_path, &mut output, &binding_res);
     }*/
 
+    println!("here ha");
     /*{
         let mut output = BufWriter::new(File::create(&icalls_rs).unwrap());
+    println!("here hb");
 
         write!(output, "{}", binding_res.icalls).unwrap();
     }*/
 
+    println!("here hc");
     //format_file_if_needed(&generated_rs);
+		println!("here hd");
     //format_file_if_needed(&icalls_rs);
+		println!("here he");
 
     // build.rs will automatically be recompiled and run if its dependencies are updated.
     // Ignoring everything but build.rs will avoid needless rebuilds.
