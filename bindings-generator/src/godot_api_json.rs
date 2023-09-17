@@ -18,7 +18,7 @@ pub fn generate_json_if_needed() -> bool {
     };
 
     let version = exec(1, Command::new(&godot_bin).arg("--version"));
-    println!(version)
+    println!(version);
 
     let has_generate_bug = match godot_version::parse_godot_version(&version) {
         Ok(parsed) => {
